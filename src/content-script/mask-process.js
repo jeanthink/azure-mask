@@ -63,6 +63,9 @@ style.sheet.insertRule(
 style.sheet.insertRule(
   `.${maskEnabledClassName} .user-email { ${blurCss} }`
 ); // user account dropdown email address (ADF)
+style.sheet.insertRule(
+  `.${maskEnabledClassName} div[title^="InstrumentationKey="] { ${blurCss} }`
+); // Connection String Masking for Application Insights 
 
 getStoredMaskedStatus(isMasked => {
   isMasked
